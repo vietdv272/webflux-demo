@@ -1,4 +1,4 @@
-//package com.howtodoinjava.demo.config;
+//package com.demo.config;
 //
 //import org.springframework.beans.factory.annotation.Value;
 //import org.springframework.context.annotation.Bean;
@@ -11,7 +11,7 @@
 //import com.mongodb.reactivestreams.client.MongoClients;
 //
 //@Configuration
-//@EnableReactiveMongoRepositories(basePackages = "com.howtodoinjava.demo.dao")
+//@EnableReactiveMongoRepositories(basePackages = "com.demo.dao")
 //public class MongoConfig extends AbstractReactiveMongoConfiguration
 //{
 //    @Value("${port}")

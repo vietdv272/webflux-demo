@@ -1,9 +1,9 @@
-package com.howtodoinjava.demo.dao;
+package com.demo.dao;
 
 import org.springframework.data.cassandra.repository.AllowFiltering;
 import org.springframework.data.cassandra.repository.ReactiveCassandraRepository;
 
-import com.howtodoinjava.demo.model.Employee;
+import com.demo.model.Employee;
 
 import reactor.core.publisher.Flux;
  

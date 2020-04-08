@@ -1,6 +1,6 @@
-package com.howtodoinjava.demo.controller;
+package com.demo.controller;
 
-import com.howtodoinjava.demo.service.JsonService;
+import com.demo.service.JsonService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.howtodoinjava.demo.model.Employee;
-import com.howtodoinjava.demo.service.EmployeeService;
+import com.demo.model.Employee;
+import com.demo.service.EmployeeService;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;

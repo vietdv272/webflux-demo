@@ -1,6 +1,6 @@
-package com.howtodoinjava.demo.service;
+package com.demo.service;
 
-import com.howtodoinjava.demo.model.Employee;
+import com.demo.model.Employee;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;

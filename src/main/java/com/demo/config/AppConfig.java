@@ -1,4 +1,4 @@
-package com.howtodoinjava.demo.config;
+package com.demo.config;
 
 import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
 import org.springframework.context.annotation.Bean;

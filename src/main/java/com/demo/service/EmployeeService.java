@@ -1,10 +1,10 @@
-package com.howtodoinjava.demo.service;
+package com.demo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
  
-import com.howtodoinjava.demo.dao.EmployeeRepository;
-import com.howtodoinjava.demo.model.Employee;
+import com.demo.dao.EmployeeRepository;
+import com.demo.model.Employee;
  
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;

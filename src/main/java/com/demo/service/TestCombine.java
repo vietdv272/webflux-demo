@@ -1,6 +1,6 @@
-package com.howtodoinjava.demo.service;
+package com.demo.service;
 
-import com.howtodoinjava.demo.controller.EmployeeController;
+import com.demo.controller.EmployeeController;
 import io.netty.util.internal.logging.Slf4JLoggerFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
