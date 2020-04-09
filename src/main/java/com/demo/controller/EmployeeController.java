@@ -1,5 +1,6 @@
 package com.demo.controller;
 
+import com.demo.dao.enity.RuleResult;
 import com.demo.service.JsonService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -89,6 +90,13 @@ public class EmployeeController {
             jsonService.getDataReactive(200).subscribe(System.out::println);
         }
         return list;
+    }
+
+    @RequestMapping(value = "/process", method = RequestMethod.GET)
+    @ResponseBody
+    public Mono<RuleResult> process() {
+        Mono<RuleResult> e = jsonService.processRule(100);
+        return e;
     }
 
     @RequestMapping(value = "/getall", method = RequestMethod.GET)
