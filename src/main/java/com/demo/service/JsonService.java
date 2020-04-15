@@ -27,8 +27,8 @@ public class JsonService {
     }
 
 
-    public Mono<RuleResult> processRule(long delay) {
-        Mono<Employee[]> emp1 = webClientBuilder.build().get().uri("http://www.mocky.io/v2/5e8b21822d0000291a1a4c29?mocky-delay=" + delay + "ms")
+    public Mono<RuleResult> processRule() {
+        Mono<Employee[]> emp1 = webClientBuilder.build().get().uri("http://www.mocky.io/v2/5e8b21822d0000291a1a4c29?mocky-delay=100ms")
                 .retrieve().bodyToMono(Employee[].class);
         Mono<RuleResult> result1 =emp1.flatMap(list -> process(Arrays.asList(list)));
         return result1;
