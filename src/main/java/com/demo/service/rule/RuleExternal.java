@@ -23,7 +23,8 @@ public class RuleExternal {
     private static final Logger LOGGER = LoggerFactory.getLogger(RuleExternal.class);
 
     public Mono<RuleResult> processRule() {
-        Mono<ExternalResponse> emp = webClientBuilder.build().post().uri("localhost:8200/default/sample")
+        Mono<ExternalResponse> emp = webClientBuilder.build().post()
+                .uri("localhost:8200/default/sample")
                 .retrieve().bodyToMono(ExternalResponse.class);
         Mono<RuleResult> result = emp.flatMap(res -> process(res.data));
         return result;
@@ -36,6 +37,4 @@ public class RuleExternal {
         }
         return Mono.just(new RuleResult(1, true, 1));
     }
-
-
 }

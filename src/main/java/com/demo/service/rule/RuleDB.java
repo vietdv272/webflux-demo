@@ -38,6 +38,4 @@ public class RuleDB {
         }
         return Mono.just(new RuleResult(2, true, 1));
     }
-
-
 }

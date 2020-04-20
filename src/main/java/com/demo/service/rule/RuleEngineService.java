@@ -23,24 +23,8 @@ public class RuleEngineService {
     public Mono<List<RuleResult>> process() {
         List<Mono<RuleResult>> list = new ArrayList<>();
         list.add(ruleExternal.processRule());
-        list.add(ruleExternal.processRule());
-        list.add(ruleExternal.processRule());
-        list.add(ruleExternal.processRule());
-        list.add(ruleExternal.processRule());
-        list.add(ruleExternal.processRule());
-        list.add(ruleExternal.processRule());
-        list.add(ruleExternal.processRule());
-//        list.add(ruleDB.processRule());
-//        list.add(ruleDB.processRule());
-//        list.add(ruleDB.processRule());
-//        list.add(ruleDB.processRule());
-//        list.add(ruleDB.processRule());
-//        list.add(ruleDB.processRule());
-//        list.add(ruleDB.processRule());
-//        list.add(ruleDB.processRule());
-//        list.add(ruleInternal.processRule());
-//        list.add(ruleInternal.processRule());
-//        list.add(ruleInternal.processRule());
+        list.add(ruleDB.processRule());
+        list.add(ruleInternal.processRule());
 
         Mono<List<RuleResult>> mono = Mono.zip(list, objectArray ->
                 Arrays.stream(objectArray)

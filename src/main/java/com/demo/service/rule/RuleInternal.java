@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import reactor.blockhound.BlockHound;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -23,16 +24,9 @@ public class RuleInternal {
     private static final Logger LOGGER = LoggerFactory.getLogger(RuleInternal.class);
 
     public Mono<RuleResult> processRule() {
+        for (int i = 0; i < 10000; i++) {
+            System.out.println("");
+        }
         return Mono.just(new RuleResult(3, true, 1));
     }
-
-    public Mono<RuleResult> process(List<Employee> list) {
-        LOGGER.info("Process RuleDB result size: " + list.size());
-        if (false) {
-            return Mono.just(new RuleResult(2, false, -1));
-        }
-        return Mono.just(new RuleResult(2, true, 1));
-    }
-
-
 }
